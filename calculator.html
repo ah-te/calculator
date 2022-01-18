@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+
+<body>
+    <div class="container">
+        <h5> <span style="color: chartreuse;">AH</span> <span style="color: cornflowerblue;">CALCULATOR</span></h5>
+        <input type="text" id="inp"disabled>
+        <div id="b1">
+            <button onclick="clear()">AC</button>
+            <button onclick="root()">√</button>
+            <button onclick="cle()">C</button>
+            <button onclick="percent()">%</button>
+            <button onclick="display('+')">+</button>
+        </div>
+        <div id="b2">
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="Sin()">sin</button>
+            <button onclick="display('-')">-</button>
+        </div>
+        <div id="b3">
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="Cos()">cos</button>
+            <button onclick="display('/')">/</button>
+        </div>
+        <div id="b4">
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="Tan()">tan</button>
+            <button onclick="display('*')">*</button>
+        </div>
+        <div id="b5">
+            <button onclick="display('0')">0</button>
+            <button onclick="display('00')">00</button>
+            <button onclick="display('.')">.</button>
+            <button onclick="solve()">=</button>
+            <button onclick="Exp('exp')">exp</button>
+        </div>
+    </div>
+
+
+	<script>
+		function display(a) {
+			// inp.innerHTML = a.value;
+
+			document.getElementById('inp').value += a;
+
+
+
+		}
+		function solve() {
+
+			var a = document.getElementById('inp').value;
+			var b = eval(a);
+			document.getElementById('inp').value = b
+			// inp.innerHTML= b;
+
+
+		}
+
+		  function clear(a) {
+			// document.getElementById('inp').value = "";
+			// this.clear()
+			//  Inp.removeChild(inp.childNodes);
+			 inp.value="";
+			//  remove ()
+			// this.inp = "";
+
+
+		}
+
+		function Cos() {
+
+			var a = document.getElementById('inp').value;
+			var b = Math.cos(a * Math.PI / 180);
+			document.getElementById('inp').value = b;
+			// inp.innerHTML= b;
+			// console.log(b);
+		}
+		function Sin() {
+
+			var a = document.getElementById('inp').value;
+			var b = Math.sin(a * Math.PI / 180);
+			document.getElementById('inp').value = b;
+			// inp.innerHTML= b;
+		}
+
+		function root() {
+
+			var a = document.getElementById('inp').value;
+			var b = Math.sqrt(a);
+			document.getElementById('inp').value = b;
+			// inp.innerHTML= b;
+		}
+
+		function Tan() {
+
+			var a = document.getElementById('inp').value;
+			var b = Math.tan(a * Math.PI / 180);
+			document.getElementById('inp').value = b;
+			// inp.innerHTML= b;
+		}
+		function percent() {
+
+			var a = document.getElementById('inp').value;
+			var b =(a / 100);
+			document.getElementById('inp').value = b;
+		// inp.innerHTML= b;	
+		}
+// 		function Exp(a,y) {
+
+// var a = document.getElementById('inp').value;
+// var b =(a,y);
+// var c = prompt('enter the value of y')
+// var c =+ b ;
+// document.getElementById('inp').value = c;
+// }
+
+		// var d = new Date();
+		// document.getElementById("MyDate").innerHTML = d.toUTCString();
+		document.getElementById("MyDate").innerHTML = new Date
+	</script>
+	
+
+</body>
+
+</html>
