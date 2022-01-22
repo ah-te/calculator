@@ -13,9 +13,9 @@
         <h5> <span style="color: chartreuse;">AH</span> <span style="color: cornflowerblue;">CALCULATOR</span></h5>
         <input type="text" id="inp"disabled>
         <div id="b1">
-            <button onclick="clear()">AC</button>
+            <button onclick="clearScreen()">AC</button>
             <button onclick="root()">√</button>
-            <button onclick="cle()">C</button>
+            <button onclick="clearScreen()">C</button>
             <button onclick="percent()">%</button>
             <button onclick="display('+')">+</button>
         </div>
@@ -34,23 +34,38 @@
             <button onclick="display('/')">/</button>
         </div>
         <div id="b4">
-            <button onclick="display('7')">7</button>
+			<button onclick="display('7')">7</button>
             <button onclick="display('8')">8</button>
             <button onclick="display('9')">9</button>
             <button onclick="Tan()">tan</button>
             <button onclick="display('*')">*</button>
         </div>
         <div id="b5">
-            <button onclick="display('0')">0</button>
+			<button onclick="display('0')">0</button>
             <button onclick="display('00')">00</button>
             <button onclick="display('.')">.</button>
             <button onclick="solve()">=</button>
             <button onclick="Exp('exp')">exp</button>
         </div>
     </div>
-
-
+	
+	
 	<script>
+		
+		function clearScreen(a) {
+			  // this.clear()
+			  //  Inp.removeChild(inp.childNodes);
+			//   inp.value="";
+			  document.getElementById('inp').value = "";
+			  var input =document.getElementById("inp");
+			  console.log(input)
+	
+	
+			//  remove ()
+			// this.inp = "";
+	
+	
+		}
 		function display(a) {
 			// inp.innerHTML = a.value;
 
@@ -59,7 +74,7 @@
 
 
 		}
-		function solve() {
+		function solve(a) {
 
 			var a = document.getElementById('inp').value;
 			var b = eval(a);
@@ -68,17 +83,7 @@
 
 
 		}
-
-		  function clear(a) {
-			// document.getElementById('inp').value = "";
-			// this.clear()
-			//  Inp.removeChild(inp.childNodes);
-			 inp.value="";
-			//  remove ()
-			// this.inp = "";
-
-
-		}
+		
 
 		function Cos() {
 
